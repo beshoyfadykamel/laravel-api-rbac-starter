@@ -7,7 +7,6 @@ use App\Http\Controllers\Api\Auth\LogoutController;
 use App\Http\Controllers\Api\Auth\RegisterController;
 
 use Illuminate\Support\Facades\Route;
-use Symfony\Component\HttpFoundation\Request;
 
 Route::prefix('auth')->group(function () {
 
@@ -15,9 +14,9 @@ Route::prefix('auth')->group(function () {
         Route::post('/register', [RegisterController::class, 'register'])->name('register');
         Route::post('/login', [LoginController::class, 'login'])->name('login');
         Route::post('/forgot-password', [ForgotPasswordController::class, 'forgotPassword'])
-            ->middleware('throttle:5,1')->name('password.forgot');
+            ->name('password.forgot');
         Route::post('/reset-password', [ForgotPasswordController::class, 'resetPassword'])
-            ->name('password.reset')->middleware('throttle:5,1');
+            ->name('password.reset');
     });
 
 
