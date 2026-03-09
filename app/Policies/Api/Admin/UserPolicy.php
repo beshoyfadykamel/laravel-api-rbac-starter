@@ -7,11 +7,7 @@ use App\Models\User;
 class UserPolicy
 {
     // NOTE: super_admin bypasses all methods via Gate::before in AppServiceProvider.
-
-    private function isSelf(User $user, User $model): bool
-    {
-        return $user->id === $model->id;
-    }
+    // NOTE: Self-protection (blocking actions on own account) is handled in UserController::denyIfSelf().
 
     public function viewAny(User $user): bool
     {
@@ -40,26 +36,22 @@ class UserPolicy
 
     public function delete(User $user, User $model): bool
     {
-        return !$this->isSelf($user, $model)
-            && $user->hasPermissionTo('delete users');
+        return $user->hasPermissionTo('delete users');
     }
 
     public function restore(User $user, User $model): bool
     {
-        return !$this->isSelf($user, $model)
-            && $user->hasPermissionTo('restore users');
+        return $user->hasPermissionTo('restore users');
     }
 
     public function forceDelete(User $user, User $model): bool
     {
-        return !$this->isSelf($user, $model)
-            && $user->hasPermissionTo('force delete users');
+        return $user->hasPermissionTo('force delete users');
     }
 
     public function changeRole(User $user, User $model): bool
     {
-        return !$this->isSelf($user, $model)
-            && $user->hasPermissionTo('change roles');
+        return $user->hasPermissionTo('change roles');
     }
 
     public function assignSuperAdmin(User $user, User $model): bool

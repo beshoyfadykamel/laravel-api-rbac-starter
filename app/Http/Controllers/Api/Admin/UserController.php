@@ -13,6 +13,7 @@ use App\Http\Requests\Api\Admin\Users\UsersUpdateRequest;
 use App\Http\Resources\Admin\UsersResource;
 use App\Models\User;
 use App\Traits\Api\ApiResponse;
+use Illuminate\Http\JsonResponse;
 
 class UserController extends Controller
 {
@@ -89,6 +90,10 @@ class UserController extends Controller
      */
     public function changeRole(ChangeRoleRequest $request, User $user)
     {
+        if ($response = $this->denyIfSelf($user, 'You cannot change your own role.')) {
+            return $response;
+        }
+
         $this->authorize('changeRole', $user);
 
         if ($request->validated('role') === 'super_admin') {
@@ -105,6 +110,10 @@ class UserController extends Controller
      */
     public function givePermissions(GivePermissionsRequest $request, User $user)
     {
+        if ($response = $this->denyIfSelf($user, 'You cannot give permissions to your own account.')) {
+            return $response;
+        }
+
         $this->authorize('givePermission', $user);
         $user->givePermissionTo($request->validated('permissions'));
 
@@ -116,6 +125,10 @@ class UserController extends Controller
      */
     public function revokePermissions(RevokePermissionsRequest $request, User $user)
     {
+        if ($response = $this->denyIfSelf($user, 'You cannot revoke permissions from your own account.')) {
+            return $response;
+        }
+
         $this->authorize('revokePermission', $user);
         foreach ($request->validated('permissions') as $permission) {
             $user->revokePermissionTo($permission);
@@ -129,6 +142,10 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
+        if ($response = $this->denyIfSelf($user, 'You cannot delete your own account.')) {
+            return $response;
+        }
+
         $this->authorize('delete', $user);
         $user->delete();
 
@@ -164,6 +181,10 @@ class UserController extends Controller
      */
     public function restore(User $user)
     {
+        if ($response = $this->denyIfSelf($user, 'You cannot restore your own account.')) {
+            return $response;
+        }
+
         $this->authorize('restore', $user);
         if (!$user->trashed()) {
             return $this->error('User is not deleted', null, 400);
@@ -179,6 +200,10 @@ class UserController extends Controller
      */
     public function forceDelete(User $user)
     {
+        if ($response = $this->denyIfSelf($user, 'You cannot permanently delete your own account.')) {
+            return $response;
+        }
+
         $this->authorize('forceDelete', $user);
         if (!$user->trashed()) {
             return $this->error('User is not deleted', null, 400);
@@ -187,5 +212,23 @@ class UserController extends Controller
         $user->forceDelete();
 
         return $this->success(null, 'User permanently deleted successfully');
+    }
+
+
+
+
+    // Private Methods
+    // ───────────────────────────────────────────────────────────────────────────────
+
+
+    /**
+     * Deny action if the target user is the authenticated user (self-protection).
+     */
+    private function denyIfSelf(User $user, string $message): ?JsonResponse
+    {
+        if ($user->id === request()->user()->id) {
+            return $this->error($message, null, 403);
+        }
+        return null;
     }
 }
