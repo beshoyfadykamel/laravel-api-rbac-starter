@@ -1,0 +1,1123 @@
+{
+  "info": {
+    "_postman_id": "cb361e1c-7dae-4d5a-9929-966c0cd63739",
+    "name": "TaskManagementAPI",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52662449",
+    "_collection_link": "https://go.postman.co/collection/52662449-cb361e1c-7dae-4d5a-9929-966c0cd63739?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Register",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{domain}}/auth/register?name=hany&email=beshoyfadykamel1@gmail.com&password=12345678&password_confirmation=12345678",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "auth",
+                "register"
+              ],
+              "query": [
+                {
+                  "key": "name",
+                  "value": "hany"
+                },
+                {
+                  "key": "email",
+                  "value": "beshoyfadykamel1@gmail.com"
+                },
+                {
+                  "key": "password",
+                  "value": "12345678"
+                },
+                {
+                  "key": "password_confirmation",
+                  "value": "12345678"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{domain}}/auth/login?email=beshoyfadykamel1@gmail.com&password=12345678",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ],
+              "query": [
+                {
+                  "key": "email",
+                  "value": "beshoyfadykamel1@gmail.com"
+                },
+                {
+                  "key": "password",
+                  "value": "12345678"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "Bw5dMeZBt1eYSOTqlx6oQNKx6trubXSjbPPYCMz509f0679e",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{domain}}/auth/logout",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "auth",
+                "logout"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Logout All",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "VBLzFIhP0609d10ZdNW7HCMhAj0kmyRnv8wiVlFx0d1912db",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{domain}}/auth/logout-all",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "auth",
+                "logout-all"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Email Verification",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "Rg4bvr7ExdGduGKyqSzvBeR912McM3FrXhY10q5Hb328d670",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{domain}}/auth/email/verify/7/c6e76d20e7a8bce9d5e0dc3e1dafdeb64a39bd8b?expires=1772740918&signature=619e7359a09c88f65777b1840319c3aad6f5e384b298924c49ba18d06f9f5add",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "auth",
+                "email",
+                "verify",
+                "7",
+                "c6e76d20e7a8bce9d5e0dc3e1dafdeb64a39bd8b"
+              ],
+              "query": [
+                {
+                  "key": "expires",
+                  "value": "1772740918"
+                },
+                {
+                  "key": "signature",
+                  "value": "619e7359a09c88f65777b1840319c3aad6f5e384b298924c49ba18d06f9f5add"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Resend Email Verification",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "Rg4bvr7ExdGduGKyqSzvBeR912McM3FrXhY10q5Hb328d670",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{domain}}/auth/email/resend",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "auth",
+                "email",
+                "resend"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Forgot Password",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{domain}}/auth/forgot-password?email=beshoyfadykamel1@gmail.com",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "auth",
+                "forgot-password"
+              ],
+              "query": [
+                {
+                  "key": "email",
+                  "value": "beshoyfadykamel1@gmail.com"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Reset Password",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{domain}}/auth/reset-password?email=beshoyfadykamel1%40gmail.com&token=cea52e900e33c8e9a8dae2e9768b6867d7ea27f3cc4cccc11cec3796fffc552e&password=12345678&password_confirmation=12345678",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "auth",
+                "reset-password"
+              ],
+              "query": [
+                {
+                  "key": "email",
+                  "value": "beshoyfadykamel1%40gmail.com"
+                },
+                {
+                  "key": "token",
+                  "value": "cea52e900e33c8e9a8dae2e9768b6867d7ea27f3cc4cccc11cec3796fffc552e"
+                },
+                {
+                  "key": "password",
+                  "value": "12345678"
+                },
+                {
+                  "key": "password_confirmation",
+                  "value": "12345678"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "User",
+      "item": [
+        {
+          "name": "Profile",
+          "item": [
+            {
+              "name": "View",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "4jazufI4jGcej6oR9XqIC8dHfMShxiaKKJeg0Rwx9efb8159",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{domain}}/profile",
+                  "host": [
+                    "{{domain}}"
+                  ],
+                  "path": [
+                    "profile"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Update",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "Rg4bvr7ExdGduGKyqSzvBeR912McM3FrXhY10q5Hb328d670",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{domain}}/profile/update?name=hany&email=beshoyfadykam4e2l@gmail.com5&password=123456789&password_confirmation=123456789",
+                  "host": [
+                    "{{domain}}"
+                  ],
+                  "path": [
+                    "profile",
+                    "update"
+                  ],
+                  "query": [
+                    {
+                      "key": "name",
+                      "value": "hany"
+                    },
+                    {
+                      "key": "email",
+                      "value": "beshoyfadykam4e2l@gmail.com5"
+                    },
+                    {
+                      "key": "password",
+                      "value": "123456789"
+                    },
+                    {
+                      "key": "password_confirmation",
+                      "value": "123456789"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Admin",
+      "item": [
+        {
+          "name": "Users",
+          "item": [
+            {
+              "name": "Users",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "sWsDR6p6vJkyuKxYFJYx7rizGBImG3KpjpqocaIWad4ca82c",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{domain}}/users?sort=asc&search=&status=&email_verified=&created_from=&per_page=12",
+                  "host": [
+                    "{{domain}}"
+                  ],
+                  "path": [
+                    "users"
+                  ],
+                  "query": [
+                    {
+                      "key": "sort",
+                      "value": "asc"
+                    },
+                    {
+                      "key": "search",
+                      "value": ""
+                    },
+                    {
+                      "key": "status",
+                      "value": ""
+                    },
+                    {
+                      "key": "email_verified",
+                      "value": ""
+                    },
+                    {
+                      "key": "created_from",
+                      "value": ""
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "12"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "View User",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "Rg4bvr7ExdGduGKyqSzvBeR912McM3FrXhY10q5Hb328d670",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{domain}}/admin/users/12",
+                  "host": [
+                    "{{domain}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "users",
+                    "12"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Create User",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "Rg4bvr7ExdGduGKyqSzvBeR912McM3FrXhY10q5Hb328d670",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{domain}}/admin/users?name=hany&email=beshoyfadykamel1@gmail.com&password=12345678&password_confirmation=12345678",
+                  "host": [
+                    "{{domain}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "users"
+                  ],
+                  "query": [
+                    {
+                      "key": "name",
+                      "value": "hany"
+                    },
+                    {
+                      "key": "email",
+                      "value": "beshoyfadykamel1@gmail.com"
+                    },
+                    {
+                      "key": "password",
+                      "value": "12345678"
+                    },
+                    {
+                      "key": "password_confirmation",
+                      "value": "12345678"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Update User",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "Rg4bvr7ExdGduGKyqSzvBeR912McM3FrXhY10q5Hb328d670",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [],
+                "url": {
+                  "raw": "{{domain}}/admin/users/12?name=bolbol&email=1@gmail.comgب&status=0",
+                  "host": [
+                    "{{domain}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "users",
+                    "12"
+                  ],
+                  "query": [
+                    {
+                      "key": "name",
+                      "value": "bolbol"
+                    },
+                    {
+                      "key": "email",
+                      "value": "1@gmail.comgب"
+                    },
+                    {
+                      "key": "status",
+                      "value": "0"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Destroy User",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "Rg4bvr7ExdGduGKyqSzvBeR912McM3FrXhY10q5Hb328d670",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{domain}}/admin/users/12",
+                  "host": [
+                    "{{domain}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "users",
+                    "12"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Trashed Users",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "sWsDR6p6vJkyuKxYFJYx7rizGBImG3KpjpqocaIWad4ca82c",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{domain}}/users?sort=asc&search=&status=&email_verified=&created_from=&per_page=12",
+                  "host": [
+                    "{{domain}}"
+                  ],
+                  "path": [
+                    "users"
+                  ],
+                  "query": [
+                    {
+                      "key": "sort",
+                      "value": "asc"
+                    },
+                    {
+                      "key": "search",
+                      "value": ""
+                    },
+                    {
+                      "key": "status",
+                      "value": ""
+                    },
+                    {
+                      "key": "email_verified",
+                      "value": ""
+                    },
+                    {
+                      "key": "created_from",
+                      "value": ""
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "12"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Restore User",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "Rg4bvr7ExdGduGKyqSzvBeR912McM3FrXhY10q5Hb328d670",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{domain}}/admin/users/12/restore",
+                  "host": [
+                    "{{domain}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "users",
+                    "12",
+                    "restore"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Force Delete User",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "Rg4bvr7ExdGduGKyqSzvBeR912McM3FrXhY10q5Hb328d670",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{domain}}/admin/users/12",
+                  "host": [
+                    "{{domain}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "users",
+                    "12"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Change Role",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "wI9ZCEx7UTxxAEAeAnANdNDWc5rpENcbLA9ZBHBC1e155693",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [],
+                "url": {
+                  "raw": "{{domain}}/admin/users/1/role?role=admin",
+                  "host": [
+                    "{{domain}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "users",
+                    "1",
+                    "role"
+                  ],
+                  "query": [
+                    {
+                      "key": "role",
+                      "value": "admin",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Give Permissions",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "v8vMWFWfWKkl56FNPXxXe0UZzTSOZA0lK2wrPzhD265817f0",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"permissions\": [\"edit users\"]\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{domain}}/admin/users/4/permissions/give",
+                  "host": [
+                    "{{domain}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "users",
+                    "4",
+                    "permissions",
+                    "give"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Revoke Permissions",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "v8vMWFWfWKkl56FNPXxXe0UZzTSOZA0lK2wrPzhD265817f0",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"permissions\": [\"edit users\"]\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{domain}}/admin/users/4/permissions/give",
+                  "host": [
+                    "{{domain}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "users",
+                    "4",
+                    "permissions",
+                    "give"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Roles",
+          "item": [
+            {
+              "name": "Roles",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "QuBdZhlPzLZYSebiI5KjES3g5PBCFChNaT4CvHUY3f3e8c3f",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{domain}}/admin/roles/",
+                  "host": [
+                    "{{domain}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "roles",
+                    ""
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "View Role",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "QuBdZhlPzLZYSebiI5KjES3g5PBCFChNaT4CvHUY3f3e8c3f",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{domain}}/admin/roles/1",
+                  "host": [
+                    "{{domain}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "roles",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Create Role",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "QuBdZhlPzLZYSebiI5KjES3g5PBCFChNaT4CvHUY3f3e8c3f",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"bolbgol\",\n  \"permissions\": [\"create users\", \"edit users\"]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{domain}}/admin/roles/",
+                  "host": [
+                    "{{domain}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "roles",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "",
+                      "value": "",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "",
+                      "value": "",
+                      "type": "text",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Update Role",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "QuBdZhlPzLZYSebiI5KjES3g5PBCFChNaT4CvHUY3f3e8c3f",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"bolbgol\",\n  \"permissions\": [\"create users\", \"edit users\"]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{domain}}/admin/roles/3",
+                  "host": [
+                    "{{domain}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "roles",
+                    "3"
+                  ],
+                  "query": [
+                    {
+                      "key": "",
+                      "value": "",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "",
+                      "value": "",
+                      "type": "text",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Delete Role",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "QuBdZhlPzLZYSebiI5KjES3g5PBCFChNaT4CvHUY3f3e8c3f",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{domain}}/admin/roles/3",
+                  "host": [
+                    "{{domain}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "roles",
+                    "3"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Permissions",
+          "item": [
+            {
+              "name": "Permissions",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "QuBdZhlPzLZYSebiI5KjES3g5PBCFChNaT4CvHUY3f3e8c3f",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{domain}}/admin/permissions/",
+                  "host": [
+                    "{{domain}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "permissions",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "",
+                      "value": "",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "",
+                      "value": "",
+                      "type": "text",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "domain",
+      "value": "",
+      "type": "default"
+    }
+  ]
+}
