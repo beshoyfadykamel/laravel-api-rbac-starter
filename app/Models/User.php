@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Notifications\Api\Auth\ResetPasswordQueued;
 use App\Notifications\Api\Auth\VerifyEmailQueued;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -80,6 +81,17 @@ class User extends Authenticatable implements MustVerifyEmail
     public function sendEmailVerificationNotification()
     {
         $this->notify(new VerifyEmailQueued());
+    }
+
+    /**
+     * Send queued password reset notification.
+     *
+     * @param string $token
+     * @return void
+     */
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new ResetPasswordQueued($token));
     }
 
     /**
