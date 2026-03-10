@@ -37,6 +37,7 @@ class ProfileController extends Controller
         $user = $request->user();
 
         $validatedData = $request->validated();
+        unset($validatedData['current_password']);
 
         $emailChanged = !empty($validatedData['email']) && $validatedData['email'] !== $user->email;
 
