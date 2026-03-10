@@ -1,11 +1,17 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "laravel/laravel",
+    "name": "beshoyfady/laravel-12-api-auth-authz",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
+    "description": "Laravel 12 RESTful API with Authentication & Role-Based Authorization (RBAC) using Sanctum and Spatie Permission.",
     "keywords": [
         "laravel",
-        "framework"
+        "laravel-12",
+        "api",
+        "authentication",
+        "authorization",
+        "rbac",
+        "sanctum",
+        "spatie-permission"
     ],
     "license": "MIT",
     "require": {
