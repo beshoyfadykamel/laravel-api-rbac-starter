@@ -7,6 +7,7 @@ use App\Http\Requests\Api\Admin\Roles_Permissions\StoreRoleRequest;
 use App\Http\Requests\Api\Admin\Roles_Permissions\UpdateRoleRequest;
 use App\Traits\Api\ApiResponse;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Support\Facades\DB;
 use Spatie\Permission\Models\Role;
 
 class RoleController extends Controller
@@ -50,11 +51,15 @@ class RoleController extends Controller
         $this->authorize('create', Role::class);
         $validated = $request->validated();
 
-        $role = Role::create([
-            'name' => $validated['name'],
-            'guard_name' => 'sanctum',
-        ]);
-        $role->syncPermissions($validated['permissions']);
+        $role = DB::transaction(function () use ($validated) {
+            $role = Role::create([
+                'name'       => $validated['name'],
+                'guard_name' => 'sanctum',
+            ]);
+            $role->syncPermissions($validated['permissions']);
+            return $role;
+        });
+
         $role->load('permissions');
         return $this->success(['role' => $role], 'Role created successfully', 201);
     }
@@ -71,10 +76,13 @@ class RoleController extends Controller
         $this->authorize('update', $role);
         $validated = $request->validated();
 
-        $role->update([
-            'name' => $validated['name'],
-        ]);
-        $role->syncPermissions($validated['permissions']);
+        DB::transaction(function () use ($validated, $role) {
+            $role->update([
+                'name' => $validated['name'],
+            ]);
+            $role->syncPermissions($validated['permissions']);
+        });
+
         $role->load('permissions');
         return $this->success(['role' => $role], 'Role updated successfully', 200);
     }
