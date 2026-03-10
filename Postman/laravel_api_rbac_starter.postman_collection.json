@@ -22,7 +22,7 @@
               }
             ],
             "url": {
-              "raw": "{{domain}}/auth/register?name=hany&email=beshoyfadykamel1@gmail.com&password=12345678&password_confirmation=12345678",
+              "raw": "{{domain}}/auth/register?name=Beshoy&email=beshoyfadykamel1@gmail.com&password=12345678&password_confirmation=12345678",
               "host": [
                 "{{domain}}"
               ],
@@ -33,7 +33,7 @@
               "query": [
                 {
                   "key": "name",
-                  "value": "hany"
+                  "value": "Beshoy"
                 },
                 {
                   "key": "email",
@@ -94,7 +94,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "Bw5dMeZBt1eYSOTqlx6oQNKx6trubXSjbPPYCMz509f0679e",
+                  "value": "UUSZ2zMGyrWUFueIjISBIKP2oAOm7AwHpfIc81jF476ddd44",
                   "type": "string"
                 }
               ]
@@ -128,7 +128,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "VBLzFIhP0609d10ZdNW7HCMhAj0kmyRnv8wiVlFx0d1912db",
+                  "value": "6dqNqZ1cYtx5vJ3uwuvXqRP4jJTPIkuyNqIFjNky224a69e6",
                   "type": "string"
                 }
               ]
@@ -162,7 +162,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "Rg4bvr7ExdGduGKyqSzvBeR912McM3FrXhY10q5Hb328d670",
+                  "value": "6dqNqZ1cYtx5vJ3uwuvXqRP4jJTPIkuyNqIFjNky224a69e6",
                   "type": "string"
                 }
               ]
@@ -209,7 +209,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "Rg4bvr7ExdGduGKyqSzvBeR912McM3FrXhY10q5Hb328d670",
+                  "value": "C7KxPpxgBMrJ8aDafengtcgY75LeNcjR1P9Qchdo62cbd1e6",
                   "type": "string"
                 }
               ]
@@ -278,7 +278,7 @@
               }
             ],
             "url": {
-              "raw": "{{domain}}/auth/reset-password?email=beshoyfadykamel1%40gmail.com&token=cea52e900e33c8e9a8dae2e9768b6867d7ea27f3cc4cccc11cec3796fffc552e&password=12345678&password_confirmation=12345678",
+              "raw": "{{domain}}/auth/reset-password?token=62b0abe1c4e8846807d116e950f78b4d80abe9910c0eaffeb7db1ce5c913eb31&email=beshoyfadykamel1%40gmail.com&password=123456789&password_confirmation=123456789",
               "host": [
                 "{{domain}}"
               ],
@@ -288,20 +288,20 @@
               ],
               "query": [
                 {
+                  "key": "token",
+                  "value": "62b0abe1c4e8846807d116e950f78b4d80abe9910c0eaffeb7db1ce5c913eb31"
+                },
+                {
                   "key": "email",
                   "value": "beshoyfadykamel1%40gmail.com"
                 },
                 {
-                  "key": "token",
-                  "value": "cea52e900e33c8e9a8dae2e9768b6867d7ea27f3cc4cccc11cec3796fffc552e"
-                },
-                {
                   "key": "password",
-                  "value": "12345678"
+                  "value": "123456789"
                 },
                 {
                   "key": "password_confirmation",
-                  "value": "12345678"
+                  "value": "123456789"
                 }
               ]
             }
@@ -324,7 +324,7 @@
                   "bearer": [
                     {
                       "key": "token",
-                      "value": "4jazufI4jGcej6oR9XqIC8dHfMShxiaKKJeg0Rwx9efb8159",
+                      "value": "K92GU06rtrEjpcF0pMJJspQun65OCAt7f3aOlzN24c11bff9",
                       "type": "string"
                     }
                   ]
@@ -357,7 +357,7 @@
                   "bearer": [
                     {
                       "key": "token",
-                      "value": "Rg4bvr7ExdGduGKyqSzvBeR912McM3FrXhY10q5Hb328d670",
+                      "value": "K92GU06rtrEjpcF0pMJJspQun65OCAt7f3aOlzN24c11bff9",
                       "type": "string"
                     }
                   ]
@@ -371,7 +371,7 @@
                   }
                 ],
                 "url": {
-                  "raw": "{{domain}}/profile/update?name=hany&email=beshoyfadykam4e2l@gmail.com5&password=123456789&password_confirmation=123456789",
+                  "raw": "{{domain}}/profile/update?name=Beshoy&email=beshoyfadykamel1@gmail.com&password=12345678&password_confirmation=12345678&current_password=12345678",
                   "host": [
                     "{{domain}}"
                   ],
@@ -382,19 +382,23 @@
                   "query": [
                     {
                       "key": "name",
-                      "value": "hany"
+                      "value": "Beshoy"
                     },
                     {
                       "key": "email",
-                      "value": "beshoyfadykam4e2l@gmail.com5"
+                      "value": "beshoyfadykamel1@gmail.com"
                     },
                     {
                       "key": "password",
-                      "value": "123456789"
+                      "value": "12345678"
                     },
                     {
                       "key": "password_confirmation",
-                      "value": "123456789"
+                      "value": "12345678"
+                    },
+                    {
+                      "key": "current_password",
+                      "value": "12345678"
                     }
                   ]
                 }
@@ -419,7 +423,7 @@
                   "bearer": [
                     {
                       "key": "token",
-                      "value": "sWsDR6p6vJkyuKxYFJYx7rizGBImG3KpjpqocaIWad4ca82c",
+                      "value": "K92GU06rtrEjpcF0pMJJspQun65OCAt7f3aOlzN24c11bff9",
                       "type": "string"
                     }
                   ]
@@ -433,11 +437,12 @@
                   }
                 ],
                 "url": {
-                  "raw": "{{domain}}/users?sort=asc&search=&status=&email_verified=&created_from=&per_page=12",
+                  "raw": "{{domain}}/admin/users?sort=asc&search=&status=&email_verified=&created_from=&per_page=12",
                   "host": [
                     "{{domain}}"
                   ],
                   "path": [
+                    "admin",
                     "users"
                   ],
                   "query": [
@@ -478,7 +483,7 @@
                   "bearer": [
                     {
                       "key": "token",
-                      "value": "Rg4bvr7ExdGduGKyqSzvBeR912McM3FrXhY10q5Hb328d670",
+                      "value": "FlQK4nSwguCo2zCRDXBtJcjPl0YIiFawxwR73vC37f3de860",
                       "type": "string"
                     }
                   ]
@@ -492,14 +497,14 @@
                   }
                 ],
                 "url": {
-                  "raw": "{{domain}}/admin/users/12",
+                  "raw": "{{domain}}/admin/users/2",
                   "host": [
                     "{{domain}}"
                   ],
                   "path": [
                     "admin",
                     "users",
-                    "12"
+                    "2"
                   ]
                 }
               },
@@ -513,7 +518,7 @@
                   "bearer": [
                     {
                       "key": "token",
-                      "value": "Rg4bvr7ExdGduGKyqSzvBeR912McM3FrXhY10q5Hb328d670",
+                      "value": "FlQK4nSwguCo2zCRDXBtJcjPl0YIiFawxwR73vC37f3de860",
                       "type": "string"
                     }
                   ]
@@ -527,7 +532,7 @@
                   }
                 ],
                 "url": {
-                  "raw": "{{domain}}/admin/users?name=hany&email=beshoyfadykamel1@gmail.com&password=12345678&password_confirmation=12345678",
+                  "raw": "{{domain}}/admin/users?name=Beshoy&email=beshoyfadykamel1@gmail.com&password=12345678&password_confirmation=12345678&role=admin",
                   "host": [
                     "{{domain}}"
                   ],
@@ -538,7 +543,7 @@
                   "query": [
                     {
                       "key": "name",
-                      "value": "hany"
+                      "value": "Beshoy"
                     },
                     {
                       "key": "email",
@@ -551,6 +556,10 @@
                     {
                       "key": "password_confirmation",
                       "value": "12345678"
+                    },
+                    {
+                      "key": "role",
+                      "value": "admin"
                     }
                   ]
                 }
@@ -565,35 +574,47 @@
                   "bearer": [
                     {
                       "key": "token",
-                      "value": "Rg4bvr7ExdGduGKyqSzvBeR912McM3FrXhY10q5Hb328d670",
+                      "value": "YKQor4YZzOIECMffnlVtmmZEWMrLH6FvqSY0yMyGf02d6a1f",
                       "type": "string"
                     }
                   ]
                 },
                 "method": "PUT",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
                 "url": {
-                  "raw": "{{domain}}/admin/users/12?name=bolbol&email=1@gmail.comgب&status=0",
+                  "raw": "{{domain}}/admin/users/1?name=Beshoy&email=beshoyfadykamel1@gmail.com&status=1",
                   "host": [
                     "{{domain}}"
                   ],
                   "path": [
                     "admin",
                     "users",
-                    "12"
+                    "1"
                   ],
                   "query": [
                     {
                       "key": "name",
-                      "value": "bolbol"
+                      "value": "Beshoy"
                     },
                     {
                       "key": "email",
-                      "value": "1@gmail.comgب"
+                      "value": "beshoyfadykamel1@gmail.com"
                     },
                     {
                       "key": "status",
-                      "value": "0"
+                      "value": "1"
+                    },
+                    {
+                      "key": "",
+                      "value": null,
+                      "type": "text",
+                      "disabled": true
                     }
                   ]
                 }
@@ -608,22 +629,28 @@
                   "bearer": [
                     {
                       "key": "token",
-                      "value": "Rg4bvr7ExdGduGKyqSzvBeR912McM3FrXhY10q5Hb328d670",
+                      "value": "YKQor4YZzOIECMffnlVtmmZEWMrLH6FvqSY0yMyGf02d6a1f",
                       "type": "string"
                     }
                   ]
                 },
                 "method": "DELETE",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
                 "url": {
-                  "raw": "{{domain}}/admin/users/12",
+                  "raw": "{{domain}}/admin/users/1",
                   "host": [
                     "{{domain}}"
                   ],
                   "path": [
                     "admin",
                     "users",
-                    "12"
+                    "1"
                   ]
                 }
               },
@@ -637,7 +664,7 @@
                   "bearer": [
                     {
                       "key": "token",
-                      "value": "sWsDR6p6vJkyuKxYFJYx7rizGBImG3KpjpqocaIWad4ca82c",
+                      "value": "YKQor4YZzOIECMffnlVtmmZEWMrLH6FvqSY0yMyGf02d6a1f",
                       "type": "string"
                     }
                   ]
@@ -651,12 +678,14 @@
                   }
                 ],
                 "url": {
-                  "raw": "{{domain}}/users?sort=asc&search=&status=&email_verified=&created_from=&per_page=12",
+                  "raw": "{{domain}}/admin/users/trashed?sort=asc&search=&status=&email_verified=&created_from=&per_page=12",
                   "host": [
                     "{{domain}}"
                   ],
                   "path": [
-                    "users"
+                    "admin",
+                    "users",
+                    "trashed"
                   ],
                   "query": [
                     {
@@ -696,22 +725,28 @@
                   "bearer": [
                     {
                       "key": "token",
-                      "value": "Rg4bvr7ExdGduGKyqSzvBeR912McM3FrXhY10q5Hb328d670",
+                      "value": "YKQor4YZzOIECMffnlVtmmZEWMrLH6FvqSY0yMyGf02d6a1f",
                       "type": "string"
                     }
                   ]
                 },
                 "method": "POST",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
                 "url": {
-                  "raw": "{{domain}}/admin/users/12/restore",
+                  "raw": "{{domain}}/admin/users/1/restore",
                   "host": [
                     "{{domain}}"
                   ],
                   "path": [
                     "admin",
                     "users",
-                    "12",
+                    "1",
                     "restore"
                   ]
                 }
@@ -726,22 +761,29 @@
                   "bearer": [
                     {
                       "key": "token",
-                      "value": "Rg4bvr7ExdGduGKyqSzvBeR912McM3FrXhY10q5Hb328d670",
+                      "value": "wI9ZCEx7UTxxAEAeAnANdNDWc5rpENcbLA9ZBHBC1e155693",
                       "type": "string"
                     }
                   ]
                 },
                 "method": "DELETE",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
                 "url": {
-                  "raw": "{{domain}}/admin/users/12",
+                  "raw": "{{domain}}/admin/users/2/force-delete",
                   "host": [
                     "{{domain}}"
                   ],
                   "path": [
                     "admin",
                     "users",
-                    "12"
+                    "2",
+                    "force-delete"
                   ]
                 }
               },
@@ -755,29 +797,34 @@
                   "bearer": [
                     {
                       "key": "token",
-                      "value": "wI9ZCEx7UTxxAEAeAnANdNDWc5rpENcbLA9ZBHBC1e155693",
+                      "value": "K92GU06rtrEjpcF0pMJJspQun65OCAt7f3aOlzN24c11bff9",
                       "type": "string"
                     }
                   ]
                 },
                 "method": "PUT",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
                 "url": {
-                  "raw": "{{domain}}/admin/users/1/role?role=admin",
+                  "raw": "{{domain}}/admin/users/7/role?role=admin",
                   "host": [
                     "{{domain}}"
                   ],
                   "path": [
                     "admin",
                     "users",
-                    "1",
+                    "7",
                     "role"
                   ],
                   "query": [
                     {
                       "key": "role",
-                      "value": "admin",
-                      "type": "text"
+                      "value": "admin"
                     }
                   ]
                 }
@@ -792,16 +839,22 @@
                   "bearer": [
                     {
                       "key": "token",
-                      "value": "v8vMWFWfWKkl56FNPXxXe0UZzTSOZA0lK2wrPzhD265817f0",
+                      "value": "YKQor4YZzOIECMffnlVtmmZEWMrLH6FvqSY0yMyGf02d6a1f",
                       "type": "string"
                     }
                   ]
                 },
                 "method": "POST",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\r\n  \"permissions\": [\"edit users\"]\r\n}",
+                  "raw": "{\r\n  \"permissions\": [\"view users\"]\r\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -809,14 +862,14 @@
                   }
                 },
                 "url": {
-                  "raw": "{{domain}}/admin/users/4/permissions/give",
+                  "raw": "{{domain}}/admin/users/3/permissions/give",
                   "host": [
                     "{{domain}}"
                   ],
                   "path": [
                     "admin",
                     "users",
-                    "4",
+                    "3",
                     "permissions",
                     "give"
                   ]
@@ -832,16 +885,22 @@
                   "bearer": [
                     {
                       "key": "token",
-                      "value": "v8vMWFWfWKkl56FNPXxXe0UZzTSOZA0lK2wrPzhD265817f0",
+                      "value": "YKQor4YZzOIECMffnlVtmmZEWMrLH6FvqSY0yMyGf02d6a1f",
                       "type": "string"
                     }
                   ]
                 },
                 "method": "POST",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\r\n  \"permissions\": [\"edit users\"]\r\n}",
+                  "raw": "{\r\n  \"permissions\": [\"create users\"]\r\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -849,16 +908,16 @@
                   }
                 },
                 "url": {
-                  "raw": "{{domain}}/admin/users/4/permissions/give",
+                  "raw": "{{domain}}/admin/users/3/permissions/revoke",
                   "host": [
                     "{{domain}}"
                   ],
                   "path": [
                     "admin",
                     "users",
-                    "4",
+                    "3",
                     "permissions",
-                    "give"
+                    "revoke"
                   ]
                 }
               },
@@ -877,13 +936,19 @@
                   "bearer": [
                     {
                       "key": "token",
-                      "value": "QuBdZhlPzLZYSebiI5KjES3g5PBCFChNaT4CvHUY3f3e8c3f",
+                      "value": "K92GU06rtrEjpcF0pMJJspQun65OCAt7f3aOlzN24c11bff9",
                       "type": "string"
                     }
                   ]
                 },
                 "method": "GET",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
                 "url": {
                   "raw": "{{domain}}/admin/roles/",
                   "host": [
@@ -912,7 +977,13 @@
                   ]
                 },
                 "method": "GET",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
                 "url": {
                   "raw": "{{domain}}/admin/roles/1",
                   "host": [
@@ -935,16 +1006,22 @@
                   "bearer": [
                     {
                       "key": "token",
-                      "value": "QuBdZhlPzLZYSebiI5KjES3g5PBCFChNaT4CvHUY3f3e8c3f",
+                      "value": "K92GU06rtrEjpcF0pMJJspQun65OCAt7f3aOlzN24c11bff9",
                       "type": "string"
                     }
                   ]
                 },
                 "method": "POST",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"name\": \"bolbgol\",\n  \"permissions\": [\"create users\", \"edit users\"]\n}",
+                  "raw": "{\n  \"permissions\": [\"create users\"]\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -952,7 +1029,7 @@
                   }
                 },
                 "url": {
-                  "raw": "{{domain}}/admin/roles/",
+                  "raw": "{{domain}}/admin/roles/?name=user",
                   "host": [
                     "{{domain}}"
                   ],
@@ -963,10 +1040,8 @@
                   ],
                   "query": [
                     {
-                      "key": "",
-                      "value": "",
-                      "type": "text",
-                      "disabled": true
+                      "key": "name",
+                      "value": "user"
                     },
                     {
                       "key": "",
@@ -993,10 +1068,16 @@
                   ]
                 },
                 "method": "PUT",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"name\": \"bolbgol\",\n  \"permissions\": [\"create users\", \"edit users\"]\n}",
+                  "raw": "{\n  \"permissions\": [\"create users\", \"edit users\"]\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -1004,7 +1085,7 @@
                   }
                 },
                 "url": {
-                  "raw": "{{domain}}/admin/roles/3",
+                  "raw": "{{domain}}/admin/roles/3?name=user",
                   "host": [
                     "{{domain}}"
                   ],
@@ -1015,10 +1096,9 @@
                   ],
                   "query": [
                     {
-                      "key": "",
-                      "value": "",
-                      "type": "text",
-                      "disabled": true
+                      "key": "name",
+                      "value": "user",
+                      "type": "text"
                     },
                     {
                       "key": "",
@@ -1039,22 +1119,28 @@
                   "bearer": [
                     {
                       "key": "token",
-                      "value": "QuBdZhlPzLZYSebiI5KjES3g5PBCFChNaT4CvHUY3f3e8c3f",
+                      "value": "K92GU06rtrEjpcF0pMJJspQun65OCAt7f3aOlzN24c11bff9",
                       "type": "string"
                     }
                   ]
                 },
                 "method": "DELETE",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
                 "url": {
-                  "raw": "{{domain}}/admin/roles/3",
+                  "raw": "{{domain}}/admin/roles/4",
                   "host": [
                     "{{domain}}"
                   ],
                   "path": [
                     "admin",
                     "roles",
-                    "3"
+                    "4"
                   ]
                 }
               },
@@ -1073,13 +1159,19 @@
                   "bearer": [
                     {
                       "key": "token",
-                      "value": "QuBdZhlPzLZYSebiI5KjES3g5PBCFChNaT4CvHUY3f3e8c3f",
+                      "value": "YKQor4YZzOIECMffnlVtmmZEWMrLH6FvqSY0yMyGf02d6a1f",
                       "type": "string"
                     }
                   ]
                 },
                 "method": "GET",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
                 "url": {
                   "raw": "{{domain}}/admin/permissions/",
                   "host": [
